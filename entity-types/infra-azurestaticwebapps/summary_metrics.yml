@@ -1,0 +1,17 @@
+providerAccountName:
+  tag:
+    key: providerAccountName
+  title: Azure account
+  unit: STRING
+siteHits:
+  goldenMetric: siteHits
+  unit: COUNT
+  title: Site Hits
+dataOut:
+  goldenMetric: dataOut
+  unit: BYTES
+  title: Data Out
+siteErrors:
+  goldenMetric: siteErrors
+  unit: COUNT
+  title: Site Errors
