@@ -1,0 +1,21 @@
+providerAccountName:
+  tag:
+    key: newrelic.cloudIntegrations.providerAccountName
+  title: Azure account
+  unit: STRING
+sessionCount:
+  goldenMetric: sessionCount
+  unit: COUNT
+  title: Session Count
+cpuUtilization:
+  goldenMetric: cpuUtilization
+  unit: PERCENTAGE
+  title: CPU Utilization
+usedMemory:
+  goldenMetric: usedMemory
+  unit: PERCENTAGE
+  title: Used Memory
+bastionCommunicationStatus:
+  goldenMetric: bastionCommunicationStatus
+  unit: COUNT
+  title: Bastion Communication Status
