@@ -1,0 +1,36 @@
+sessionCount:
+  title: Session Count
+  unit: COUNT
+  queries:
+    azure:
+      select: average(azure.network.bastionhosts.sessions)
+      from: Metric
+      eventId: entity.guid
+      eventName: entity.name
+cpuUtilization:
+  title: CPU Utilization
+  unit: PERCENTAGE
+  queries:
+    azure:
+      select: average(azure.network.bastionhosts.cpu_utilization)
+      from: Metric
+      eventId: entity.guid
+      eventName: entity.name
+usedMemory:
+  title: Used Memory
+  unit: PERCENTAGE
+  queries:
+    azure:
+      select: average(azure.network.bastionhosts.used_mem)
+      from: Metric
+      eventId: entity.guid
+      eventName: entity.name
+bastionCommunicationStatus:
+  title: Bastion Communication Status
+  unit: COUNT
+  queries:
+    azure:
+      select: average(azure.network.bastionhosts.pingmesh)
+      from: Metric
+      eventId: entity.guid
+      eventName: entity.name
