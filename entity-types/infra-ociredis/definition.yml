@@ -2,7 +2,7 @@ domain: INFRA
 type: OCIREDIS
 goldenTags:
 - oci.compartmentId
-- oci.displayName
+- oci.redis.displayName
 - oci.lifecycleState
 - oci.region
 configuration:
@@ -16,7 +16,7 @@ synthesis:
   rules:
   - ruleName: infra_ociredis_oci_resourceId
     identifier: oci.resourceId
-    name: oci.resourceName
+    name: oci.redis.displayName
     legacyFeatures:
       overrideGuidType: true
     encodeIdentifierInGUID: true
