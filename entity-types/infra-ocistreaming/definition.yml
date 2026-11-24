@@ -21,8 +21,11 @@ synthesis:
       overrideGuidType: true
     encodeIdentifierInGUID: true
     conditions:
+    # oci_streaming metrics are emitted per-stream with an ocid1.stream resourceId
+    # (verified via `oci monitoring metric list` in cust-1); the prior
+    # "ocid1.streampool" prefix never matched, so streams never synthesized.
     - attribute: oci.resourceId
-      prefix: "ocid1.streampool"
+      prefix: "ocid1.stream"
     - attribute: oci.namespace
       value: "oci_streaming"
     # New rule for logs

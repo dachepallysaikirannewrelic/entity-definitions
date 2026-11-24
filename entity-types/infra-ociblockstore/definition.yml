@@ -29,6 +29,20 @@ synthesis:
       prefix: "ocid1.volume"
     - attribute: oci.namespace
       value: "oci_blockstore"
+  # Boot volumes emit under oci_blockstore with an ocid1.bootvolume resourceId
+  # (verified via `oci monitoring metric list` in cust-1); without this rule they
+  # never synthesize.
+  - ruleName: infra_ociblockstore_oci_resourceId_bootvolume
+    identifier: oci.resourceId
+    name: oci.resourceId
+    legacyFeatures:
+      overrideGuidType: true
+    encodeIdentifierInGUID: true
+    conditions:
+    - attribute: oci.resourceId
+      prefix: "ocid1.bootvolume"
+    - attribute: oci.namespace
+      value: "oci_blockstore"
 
 ownership:
   primaryOwner:
