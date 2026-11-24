@@ -14,15 +14,19 @@ synthesis:
       entityTagNames: [newrelic.cloudIntegrations.providerAccountName, providerAccountName]
       multiValue: false
   rules:
-  - ruleName: infra_ocigoldengate_oci_resourceId
-    identifier: oci.resourceId
-    name: oci.resourceName
+  # oci_goldengate metrics carry `deploymentId` (the deployment OCID) and
+  # `deploymentName` (the friendly name) — NOT resourceId/resourceName. Verified via
+  # `oci monitoring metric list` in cust-1 (emitted keys: deploymentId, deploymentName).
+  # With the old resourceId/resourceName keys this type never synthesized.
+  - ruleName: infra_ocigoldengate_oci_deploymentId
+    identifier: oci.deploymentId
+    name: oci.deploymentName
     legacyFeatures:
       overrideGuidType: true
     encodeIdentifierInGUID: true
     conditions:
-    - attribute: oci.resourceId
-      prefix: "ocid1.goldengatedeployment.oc1"
+    - attribute: oci.deploymentId
+      prefix: "ocid1.goldengatedeployment"
     - attribute: oci.namespace
       value: "oci_goldengate"
   - ruleName: infra_ocigoldengate_logs
