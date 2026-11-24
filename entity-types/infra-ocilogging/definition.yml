@@ -16,7 +16,7 @@ synthesis:
   rules:
   - ruleName: infra_ocilogging_oci_resourceId
     identifier: oci.resourceId
-    name: oci.resourceName
+    name: oci.logObjectName
     legacyFeatures:
       overrideGuidType: true
     encodeIdentifierInGUID: true

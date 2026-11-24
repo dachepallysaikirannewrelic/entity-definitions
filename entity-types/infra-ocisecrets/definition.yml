@@ -16,13 +16,13 @@ synthesis:
   rules:
   - ruleName: infra_ocisecrets_oci_resourceId
     identifier: oci.resourceId
-    name: oci.resourceName
+    name: oci.displayName
     legacyFeatures:
       overrideGuidType: true
     encodeIdentifierInGUID: true
     conditions:
     - attribute: oci.resourceId
-      prefix: "ocid1.secret"
+      prefix: "ocid1.vaultsecret"
     - attribute: oci.namespace
       value: "oci_secrets"
 ownership:

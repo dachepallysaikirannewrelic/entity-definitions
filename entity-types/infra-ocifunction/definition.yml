@@ -18,7 +18,7 @@ synthesis:
   rules:
   - ruleName: infra_ocifunction_oci_resourceId
     identifier: oci.resourceId
-    name: oci.resourceName
+    name: oci.resourceDisplayName
     legacyFeatures:
       overrideGuidType: true
     encodeIdentifierInGUID: true

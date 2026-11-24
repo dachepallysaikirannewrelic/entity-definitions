@@ -4,7 +4,7 @@
     "oci.namespace": "oci_logging",
     "oci.region": "us-ashburn-1",
     "oci.resourceId": "ocid1.log.oc1.iad.amaaaaaatvlqdbyaakosuk4xg4y5wa5xhrmqhs54tr7pvmklsjkwc2qtiyrq",
-    "oci.resourceName": "test-log",
+    "oci.logObjectName": "test-log",
     "oci.lifecycleState": "ACTIVE",
     "collector.name": "oci-monitor",
     "collector.version": "release-007",
