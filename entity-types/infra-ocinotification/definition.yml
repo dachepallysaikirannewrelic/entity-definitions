@@ -16,7 +16,7 @@ synthesis:
   rules:
   - ruleName: infra_ocinotification_oci_resourceId
     identifier: oci.resourceId
-    name: oci.resourceName
+    name: oci.topicDisplayName
     legacyFeatures:
       overrideGuidType: true
     encodeIdentifierInGUID: true

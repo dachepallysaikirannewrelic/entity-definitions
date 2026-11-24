@@ -4,7 +4,7 @@
     "oci.namespace": "oci_notification",
     "oci.region": "us-ashburn-1",
     "oci.resourceId": "ocid1.onstopic.oc1.iad.amaaaaaatvlqdbyaqzyjvxoqkw4b7f6n3z5j2xnq5jy2xg7l4pv6qkw3xmqa",
-    "oci.resourceName": "test-topic",
+    "oci.topicDisplayName": "test-topic",
     "oci.lifecycleState": "ACTIVE",
     "collector.name": "oci-monitor",
     "collector.version": "release-007",

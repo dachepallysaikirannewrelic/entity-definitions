@@ -5,6 +5,7 @@
     "oci.region": "us-ashburn-1",
     "oci.parentResourceId": "ocid1.ipsecconnection.oc1.us-ashburn-1.exampleuniqueID",
     "oci.publicIp": "203.0.113.10",
+    "oci.resourceName": "ipsectunnel-test-2",
     "collector.name": "oci-metric-streams",
     "instrumentation.provider": "oci",
     "metricName": "oci.vpn.tunnel.state",
